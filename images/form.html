@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulo di Richiesta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fai una richiesta</h1>
+        <a href="index.html" class="back-link">← Torna alla pagina principale</a>
+    </header>
+    <main>
+        <section class="request-form">
+            <h2>Compila il modulo per fare una richiesta.</h2>
+            <form id="requestForm">
+                <label for="name">Il tuo nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="request">Cosa vorresti richiedere?</label>
+                <textarea id="request" name="request" rows="4" required></textarea>
+
+                <button type="submit">Invia la richiesta</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Classe XYZ</p>
+    </footer>
+
+    <script>
+        document.getElementById("requestForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const request = document.getElementById("request").value;
+
+            const message = {
+                content: `**Nuova richiesta:**\n**Nome:** ${name}\n**Richiesta:** ${request}`
+            };
+
+            fetch("https://discord.com/api/webhooks/1309215202029469776/UWipcGoWSS9Dia_T8db0e2gy5mWvRhRNfM7KliBHV2huaNIA9KVgy3uBCJrc_zH-30X8", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(message)
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert("La tua richiesta è stata inviata!");
+                    document.getElementById("requestForm").reset();
+                } else {
+                    alert("Si è verificato un errore. Riprova.");
+                }
+            })
+            .catch(error => {
+                alert("Errore nella connessione. Riprova.");
+            });
+        });
+    </script>
+</body>
+</html>

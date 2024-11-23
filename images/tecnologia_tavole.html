@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="it">
+    <style>
+        .downloads {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .file {
+            flex: 1 1 calc(33% - 20px);
+            background-color: #ffffff;
+            border: 2px solid #007bff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+        .file:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        .file a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .file a:hover {
+            color: #0056b3;
+        }
+        .file p {
+            color: #555;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        .file-icon {
+            margin-right: 10px;
+            font-size: 20px; /* Dimensione dell'icona */
+        }
+    </style>    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia AutoCad - Tavole e File</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tecnologia - Tavole e File</h1>
+        <p>Scarica i file utili per le tavole di tecnologia.</p>
+        <a href="index.html" class="back-link">← Torna alla pagina principale</a>
+    </header>
+    <main>
+        <section class="downloads">
+            <div class="file">
+                <a href="https://cdn.discordapp.com/attachments/1286776204216631479/1309249715904446484/problema1_pag20.dwg?ex=6740e550&is=673f93d0&hm=97efa2a1cf2d1d5ceb10926b047f1f8a153adea6afbb473b6cc907eb1348af10&" download>Problema 1 PAG.20 (DWG)</a>
+                <p>Clicca sopra per scaricare il file del problema 1 di pag 20.</p>
+            </div>
+            <div class="file">
+                <a href="https://cdn.discordapp.com/attachments/1286776204216631479/1309249716323881091/problema2_pag20.dwg?ex=6740e551&is=673f93d1&hm=75b0d1cbfc2224934597b9c08f088739f61780734b721da280b1ab0379c32ebe&" download>Problema 2 PAG.20 (DWG)</a>
+                <p>Clicca sopra per scaricare il file del problema 2 di pag 20.</p>
+            </div>
+            <div class="file">
+                <a href="https://cdn.discordapp.com/attachments/1286776204216631479/1309249715145277451/es4_coordinate.dwg?ex=6740e550&is=673f93d0&hm=4f416e86e1d070ac89d2052012800dc2f339aad1ffedecb1600f121a60464031&" download>Esercitazione 4 Coordinate (DWG)</a>
+                <p>Clicca sopra per scaricare il file Esercitazione 4 delle Coordinate.</p>
+            </div>
+            <div class="file">
+                <a href="https://cdn.discordapp.com/attachments/1286776204216631479/1309249715514380350/esercitazione1_autocad.dwg?ex=6740e550&is=673f93d0&hm=e349ea60709aeb76d557bd0279b1338d6c0f96d78e44dde70c3d695638ff3e1c&" download>Esercitazione 1 Basico (DWG)</a>
+                <p>Clicca sopra per scaricare il file Esercitazione 1.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Classe C</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,234 @@
+/* Base styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Font moderno */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    background: linear-gradient(135deg, #d1d1d1 0%, #d1d1d1 100%);
+}
+
+header {
+    text-align: center;
+    padding: 40px; /* Maggiore padding per un aspetto più arioso */
+    background: linear-gradient(90deg, rgb(116, 114, 114) 0%, rgba(0,0,0,1) 100%);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombra più intensa */
+    border-radius: 12px; /* Angoli arrotondati */
+    animation: slideIn 0.5s ease; /* Animazione di entrata */
+    
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem; /* Aumentato per maggiore impatto */
+    letter-spacing: 1px; /* Spaziatura delle lettere */
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px; /* Aggiunto spazio sopra il paragrafo */
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px; /* Spazio tra le categorie */
+    margin: 40px 20px; /* Margine */
+    justify-items: center;
+}
+
+.category {
+    background: white;
+    border-radius: 16px; /* Angoli più arrotondati */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: center;
+    padding: 30px; /* Maggiore padding */
+    position: relative; /* Posizione relativa per l'effetto */
+}
+
+.category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    border-radius: 16px; /* Angoli arrotondati */
+}
+
+.category:hover::before {
+    opacity: 1; /* Opacità al passaggio del mouse */
+}
+
+.category img {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.category h3 {
+    margin-top: 15px; /* Maggiore spazio sopra il titolo */
+    padding: 15px;
+    font-size: 1.5rem; /* Maggiore dimensione del testo */
+    background: linear-gradient(to right, #2d53ff, #005dc7);
+    color: white;
+    transition: background 0.4s ease, transform 0.4s ease;
+}
+
+/* Hover Effects */
+.category:hover {
+    transform: translateY(-10px); /* Effetto di sollevamento */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+}
+
+.category:hover img {
+    transform: rotate(15deg) scale(1.1);
+    filter: brightness(1.2); /* Effetto di luminosità */
+}
+
+.category:hover h3 {
+    background: linear-gradient(to right, #7991fa, #4d85c4);
+    transform: scale(1.05); /* Effetto di ingrandimento */
+}
+
+/* Sezione per richieste */
+.request-category {
+    margin-top: 30px; /* Maggiore spazio sopra */
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 20px; /* Maggiore padding */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Maggiore larghezza massima */
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease; /* Transizione per l'effetto di ingrandimento */
+}
+
+.request-category:hover {
+    transform: scale(1.02); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+.request-category h3 {
+    font-size: 1.6rem; /* Maggiore dimensione del titolo */
+    color: white;
+    margin-bottom: 20px; /* Maggiore spazio sotto il titolo */
+}
+
+/* Aggiungi margine ai bottoni */
+.request-category button {
+    margin-top: 15px;
+    padding: 14px 24px; /* Maggiore padding per i bottoni */
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 8px; /* Angoli più arrotondati */
+    cursor: pointer;
+    transition: background-color 0.4s ease, transform 0.3s ease; /* Aggiunto effetto di trasformazione */
+}
+
+.request-category button:hover {
+    background-color: #2575fc; 
+    transform: scale(1.05); /* Effetto di ingrandimento al passaggio del mouse */
+}
+
+/* Stili per il form di input */
+.request-category input[type="text"], .request-category textarea {
+    width: 100%;
+    padding: 12px; /* Maggiore padding */
+    margin: 12px 0; /* Maggiore margine */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Angoli più arrotondati */
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.4s ease; /* Transizione per il colore del bordo */
+}
+
+.request-category input[type="text"]:focus, .request-category textarea:focus {
+    border-color: #6a11cb; /* Colore del bordo al focus */
+}
+
+/* Responsività per schermi più piccoli */
+@media (max-width: 768px) {
+    .request-category {
+        padding: 20px 10px; /* Ridotto padding per dispositivi più piccoli */
+        max-width: 90%; /* Maggiore larghezza massima */
+    }
+
+    .request-category h3 {
+        font-size: 1.5rem; /* Ridotto la dimensione del titolo */
+    }
+
+    .request-category input[type="text"], .request-category textarea {
+        font-size: 1rem; /* Font più grande per gli input */
+    }
+}
+
+iframe {
+    width: 100%;
+    height: 600px; 
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    border-radius: 12px; /* Angoli arrotondati per l'iframe */
+}
+
+/* Responsività per schermi più piccoli */
+@media (max-width: 768px) {
+    .category h3 {
+        font-size: 1.3rem; 
+    }
+
+    .category img {
+        width: 80px; 
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 2.5rem; /* Ridotto per schermi più piccoli */
+    }
+
+    iframe {
+        height: 400px; 
+    }
+}
+
+@media (max-width: 480px) {
+    header p {
+        font-size: 1rem; 
+    }
+
+    .category {
+        padding: 15px; /* Maggiore padding per schermi piccoli */
+    }
+
+    .category img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .categories {
+        grid-template-columns: 1fr; 
+    }
+
+    iframe {
+        height: 350px; 
+    }
+}

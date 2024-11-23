@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between; /* Sposta gli elementi ai lati opposti */
+            align-items: center; /* Allinea verticalmente gli elementi */
+        }
+
+    .logo {
+            max-width: 100px; /* Imposta una larghezza massima per il logo */
+            height: auto; /* Mantiene le proporzioni del logo */
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The "C" Archive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Benvenuto Su "The C Archive"</h1>
+        <p>Seleziona una categoria per accedere al suo archivio.</p>
+            <img src="images/logo.png" alt="Logo" class="logo">
+    </header>
+    <main>
+        <div class="categories">
+            <div class="category">
+                <a href="tecnologia_tavole.html">
+                    <img src="images/tecnologia_tavole.png" alt="Tecnologia Tavole e File">
+                    <h3>Tecnologia Tavole e File</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="tecnologia_appunti.html">
+                    <img src="images/tecnologia_appunti.png" alt="Tecnologia appunti">
+                    <h3>Tecnologia Appunti (DOCX)</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="informatica.html">
+                    <img src="images/informatica.png" alt="informatica">
+                    <h3>Informatica - Files (HTML e DOCX)</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="altre_materie.html">
+                    <img src="images/altre_materie.png" alt="Altre Materie">
+                    <h3>Altre Materie - In Arrivo!</h3>
+                </a>
+            </div>
+            <div class="category">
+                <a href="forum.html">
+                    <img src="images/forum.png" alt="Forum">
+                    <h3>Forum - Domande (Qualsiasi domanda)</h3>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Nuova sezione per richieste -->
+        <div class="category request-category">
+            <a href="form.html">
+                <img src="images/request.png" alt="Richieste">
+                <h3>Hai delle richieste particolari?</h3>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Classe C</p>
+    </footer>
+</body>
+</html>
