@@ -1,22 +1,122 @@
 /* Base styles */
 body {
-    font-family: 'Poppins', sans-serif; /* Font moderno */
+    font-family: 'Georgia', serif; /* Font più classico */
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    color: #444;
-    background: linear-gradient(135deg, #d1d1d1 0%, #d1d1d1 100%);
+    color: #333; /* Testo più scuro */
+    background: #f9f9f9; /* Sfondo chiaro */
 }
 
 header {
     text-align: center;
-    padding: 40px; /* Maggiore padding per un aspetto più arioso */
-    background: linear-gradient(90deg, rgb(116, 114, 114) 0%, rgba(0,0,0,1) 100%);
+    padding: 20px; /* Ridotto padding */
+    background: #fff; /* Sfondo bianco per l'intestazione */
+    color: #000; /* Testo nero */
+    box-shadow: none; /* Rimosso l'ombra */
+    border-radius: 0; /* Angoli non arrotondati */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Dimensione del font ridotto */
+}
+
+header p {
+    font-size: 1rem; /* Dimensione del font ridotto */
+    margin-top: 5px; /* Ridotto margine */
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* Spazio tra le categorie */
+    margin: 20px; /* Margine ridotto */
+    justify-items: center;
+}
+
+.category {
+    background: #fff; /* Sfondo bianco */
+    border: 1px solid #ccc; /* Bordo grigio chiaro */
+    border-radius: 0; /* Angoli non arrotondati */
+    box-shadow: none; /* Rimosso l'ombra */
+    text-align: center;
+    padding: 20px; /* Ridotto padding */
+}
+
+.category img {
+    width: 80px; /* Dimensione dell'immagine ridotto */
+    height: 80px;
+    margin-top: 10px; /* Ridotto margine */
+}
+
+.category h3 {
+    margin-top: 10px; /* Ridotto margine */
+    padding: 10px;
+    font-size: 1.3rem; /* Dimensione del font ridotto */
+    background: none; /* Rimosso il gradiente */
+    color: #000; /* Testo nero */
+}
+
+/* Sezione per richieste */
+.request-category {
+    margin-top: 20px; /* Ridotto spazio sopra */
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ccc; /* Bordo grigio chiaro */
+    padding: 20px; /* Ridotto padding */
+    max-width: 600px; /* Larghezza massima mantenuta */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.request-category h3 {
+    font-size: 1.4rem; /* Dimensione del titolo ridotto */
+    color: #000; /* Testo nero */
+    margin-bottom: 15px; /* Ridotto spazio sotto il titolo */
+}
+
+/* Stili per i bottoni */
+.request-category button {
+    margin-top: 10px; /* Ridotto margine */
+    padding: 10px 20px; /* Ridotto padding */
+    background-color: #007bff; /* Colore blu */
     color: white;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Ombra più intensa */
-    border-radius: 12px; /* Angoli arrotondati */
-    animation: slideIn 0.5s ease; /* Animazione di entrata */
-    
+    border: none;
+    border-radius: 0; /* Angoli non arrotondati */
+    cursor: pointer;
+}
+
+.request-category button:hover {
+    background-color: #0056b3; /* Colore blu scuro al passaggio del mouse */
+}
+
+/* Stili per il form di input */
+.request-category input[type="text"], .request-category textarea {
+    width: 100%;
+    padding: 10px; /* Ridotto padding */
+    margin: 10px 0; /* Ridotto margine */
+    border: 1px solid #ccc; /* Bordo grigio chiaro */
+    border-radius: 0; /* Angoli non arrotondati */
+    box-sizing: border-box /* Assicurati che il padding e il bordo siano inclusi nella larghezza totale */
+}
+
+.request-category input[type="text"]:focus, .request-category textarea:focus {
+    border-color: #007bff; /* Colore blu al focus */
+    outline: none; /* Rimuovi il contorno predefinito */
+}
+
+footer {
+    text-align: center;
+    padding: 20px; /* Ridotto padding */
+    background: #fff; /* Sfondo bianco */
+    color: #000; /* Testo nero */
+    border-top: 1px solid #ccc; /* Bordo superiore grigio chiaro */
+}
+
+footer p {
+    margin: 0; /* Rimuovi margine */
+    font-size: 0.9rem; /* Dimensione del font ridotto */
 }
 @keyframes slideIn {
     from {
