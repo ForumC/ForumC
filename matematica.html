@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .downloads {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px; /* Limitiamo la larghezza per un aspetto più ordinato */
+        }
+        .file-list {
+            list-style-type: none; /* Rimuove i punti elenco */
+            padding: 0; /* Rimuove il padding predefinito */
+        }
+        .file {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0; /* Aggiunge una linea di separazione */
+            transition: background-color 0.2s;
+        }
+        .file:hover {
+            background-color: #f1f1f1; /* Cambia colore al passaggio del mouse */
+        }
+        .file a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .file a:hover {
+            color: #0056b3;
+        }
+        .file p {
+            color: #555;
+            margin: 5px 0 0; /* Margine solo sopra il testo */
+            font-size: 14px;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatica - Files</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Informatica files</h1>
+        <p>Scarica tutti i file di informatica.</p>
+        <a href="index.html" class="back-link">← Torna alla pagina principale</a>
+    </header>
+    <main>
+        <section class="downloads">
+            <div class="file">
+                <a href="https://www.canva.com/design/DAGU2m06snA/qPIUjGwQRwM9ovcq8856-Q/view?utm_content=DAGU2m06snA&amp;utm_campaign=designshare&amp;utm_medium=link&amp;utm_source=editor#1" download>Geometria Euclidea PT.2 (Slides)</a>
+                <p>Clicca sopra per aprire</p>
+            </div>
+            <div class="file">
+                <a href="https://www.canva.com/design/DAGQpbBGLwc/JptjRnWGKfXFQw1s_8vJ1Q/view?utm_content=DAGQpbBGLwc&amp;utm_campaign=designshare&amp;utm_medium=link&amp;utm_source=editor#2" download>Geometria Euclidea PT.1 (Slides)</a>
+                <p>Clicca sopra per aprire</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Classe C</p>
+    </footer>
+</body>
+</html>
