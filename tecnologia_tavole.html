@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="it">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
         .downloads {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
             padding: 20px;
-            background-color: #f1f1f1;
+            background-color: #ffffff;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px; /* Limitiamo la larghezza per un aspetto più ordinato */
+        }
+        .file-list {
+            list-style-type: none; /* Rimuove i punti elenco */
+            padding: 0; /* Rimuove il padding predefinito */
         }
         .file {
-            flex: 1 1 calc(33% - 20px);
-            background-color: #ffffff;
-            border: 2px solid #007bff;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-            position: relative;
-            overflow: hidden;
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0; /* Aggiunge una linea di separazione */
+            transition: background-color 0.2s;
         }
         .file:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background-color: #f1f1f1; /* Cambia colore al passaggio del mouse */
         }
         .file a {
             text-decoration: none;
             color: #007bff;
             font-weight: bold;
             font-size: 16px;
-            display: flex;
-            align-items: center;
         }
         .file a:hover {
             color: #0056b3;
         }
         .file p {
             color: #555;
-            margin-top: 5px;
+            margin: 5px 0 0; /* Margine solo sopra il testo */
             font-size: 14px;
         }
-        .file-icon {
-            margin-right: 10px;
-            font-size: 20px; /* Dimensione dell'icona */
-        }
-    </style>    
+    </style>   
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
